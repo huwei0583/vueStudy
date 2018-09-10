@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 200Px;
+            height: 200px;
+            /* background: red; */
+            position: relative;
+            left: 600px;
+            top: 300px;
+
+            animation: myfirst 3s linear 2s infinite normal;
+            /* Firefox: */
+            -moz-animation: myfirst 3s linear 2s infinite alternate;
+            /* Safari 和 Chrome: */
+            -webkit-animation: myfirst 3s linear 2s infinite normal;
+            /* Opera: */
+            -o-animation: myfirst 3s linear 2s infinite alternate;
+        }
+        .content>div{
+            position: absolute;
+           
+            
+        }
+        /* dotted dashed double */
+        .content>div:nth-child(1){
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+            border-top: 2px solid #f33a66;
+            border-left: 2px solid transparent; 
+            border-right: 2px solid transparent;
+            border-bottom: 2px solid #af4be1;
+            border-radius: 50%;
+            z-index: 6;
+        }
+        .content>div:nth-child(2){
+            width: 45%;
+            height: 20%;
+            top: 40%;
+            left: 30%;
+            background: #fff;
+            z-index: 6;
+        }
+        .content>div:nth-child(3){
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-top: 2px solid #15b48a;
+            border-left: 2px dotted #15b48a;
+            border-bottom: 2px solid #f3b32d;
+            border-right: 2px dotted #f3b32d;
+            border-radius: 50%;
+            z-index: 5;
+        }
+        .content>div:nth-child(4){
+            width: 66%;
+            height: 66%;
+            top: 17%;
+            left: 17%;
+            background: #fff;
+            z-index: 5;
+        }
+
+
+        @keyframes myfirst {
+            0% {
+                transform:rotate(0deg);
+                -webkit-transform:rotate(0deg);
+                -ms-transform:rotate(0deg);
+            }
+            /* 25% {
+                transform:rotate(90deg);
+                -webkit-transform:rotate(90deg);
+                -ms-transform:rotate(90deg);
+            }
+            50% {
+                transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+            }
+            75% {
+                transform:rotate(270deg);
+                -webkit-transform:rotate(270deg);
+                -ms-transform:rotate(270deg);
+            } */
+
+            100%{
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+                -ms-transform:rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes myfirst{
+            0% {
+                transform:rotate(0deg);
+                -webkit-transform:rotate(0deg);
+                -ms-transform:rotate(0deg);
+            }
+            /* 25% {
+                transform:rotate(90deg);
+                -webkit-transform:rotate(90deg);
+                -ms-transform:rotate(90deg);
+            }
+            50% {
+                transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+            }
+            75% {
+                transform:rotate(270deg);
+                -webkit-transform:rotate(270deg);
+                -ms-transform:rotate(270deg);
+            } */
+
+            100%{
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+                -ms-transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+    <div></div>
+</body>
+
+</html>
