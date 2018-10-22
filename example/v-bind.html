@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind</title>
+    <style>
+        .classA{
+            color: red;
+        }
+        .classB{
+            font-size: 20px;
+        }
+    </style>
+    <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-bind实例</h1>
+    <hr>
+    <div id="app">
+        <img width="200" height="200" v-bind:src="imgSrc" alt="">
+        <a :href="webUrl" target="_blank">百度</a>
+        <hr>
+        <h3 :class="className">绑定class</h3>
+        <h3 :class="{classA:isTrue}">绑定class</h3>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!',
+                imgSrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539062774804&di=0377cedbdc92f9a647333037b1d53a32&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F74%2F51%2F99d58PIC6vm_1024.jpg",
+                webUrl:"https://www.baidu.com/",
+                className:'classA',
+                isTrue:true
+
+            }
+        })
+    </script>
+</body>
+</html>
